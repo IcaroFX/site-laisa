@@ -1,0 +1,47 @@
+html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+}
+
+#message {
+  display: none;
+  font-size: 2em;
+  position: absolute;
+  top: 20px;
+}
+
+#moveButton {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 25px; /* Adiciona bordas arredondadas */
+  border: none; /* Remove a borda padrão */
+  color: white;
+  background-color: palevioletred;
+  font-family: "Poppins", sans-serif;
+}
+
+.photo {
+  width: 200px;
+  height: auto;
+  position: absolute; /* Para permitir a animação */
+  opacity: 0; /* Começa invisível */
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh); /* Move para baixo até fora da tela */
+      opacity: 1; /* Torna visível */
+  }
+}
+
